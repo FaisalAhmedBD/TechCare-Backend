@@ -20,6 +20,7 @@
     "express": "^4.16.3"
   },
   "devDependencies": {
+    "express-generator": "^4.16.0",
     "nodemon": "^1.18.4"
   }
 }
