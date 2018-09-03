@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/FaisalAhmedBD/TechCare-Backend#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mongodb": "^3.1.4",
+    "mongoose": "^5.2.12"
   },
   "devDependencies": {
     "express-generator": "^4.16.0",
