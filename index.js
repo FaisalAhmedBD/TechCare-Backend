@@ -23,12 +23,15 @@ Models.client.find({}, (err, data) => {
     if (err)
         console.log('error')
     else {
-        clientList=data;
+        clientList = data;
         console.log(data)
     }
 });
 
 app.get('/', (req, res) => {
-    res.send(clientList)
+    res.send({
+        'clients': clientList,
+        'number_of_clients': clientList.length
+    })
 })
 app.listen(8000, () => console.log('TechCare is listening on port 8000!'))
