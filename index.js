@@ -9,7 +9,7 @@ var nwClient = new Models.client({
     type: 'Ecommerce',
     location: 'Bangladesh',
     feedback: 'Awesome product',
-    client_logo: 'client logo test',
+    client_logo: 'client logo test!',
     product_logo: 'product logo test',
 });
 nwClient.save(error => {
