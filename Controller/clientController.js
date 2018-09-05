@@ -3,7 +3,7 @@ const app = express();
 var Models = require('../Model/models');
 var { addClient } = require('../Middleware/addClient');
 
-let clientMiddleWare = (req, res) => {
+let getClientInfo = (req, res) => {
     Models.client.find({}, (err, data) => {
         if (err) {
             console.log('error : ', err);
@@ -18,6 +18,6 @@ let clientMiddleWare = (req, res) => {
     });
 }
 module.exports = {
-    clientMiddleWare,
+    getClientInfo,
     addClient
 }
