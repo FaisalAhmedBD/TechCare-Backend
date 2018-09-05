@@ -18,6 +18,6 @@ let clientMiddleWare = (req, res) => {
     });
 }
 module.exports = {
-    clientMiddleWare: clientMiddleWare,
-    addClient: addClient
+    clientMiddleWare,
+    addClient
 }
