@@ -1,4 +1,5 @@
 var Models = require('./Model/models')
+var clientMiddleWare=require('./Middleware/client');
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
@@ -18,20 +19,6 @@ app.use(express.static('public'));
 //     console.log('new client added');
 // })
 
-var clientList;
-Models.client.find({}, (err, data) => {
-    if (err)
-        console.log('error')
-    else {
-        clientList = data;
-        console.log(data)
-    }
-});
 
-app.get('/', (req, res) => {
-    res.send({
-        'clients': clientList,
-        'number_of_clients': clientList.length
-    })
-})
+app.get('/', clientMiddleWare.clientMiddleWare)
 app.listen(8000, () => console.log('TechCare is listening on port 8000!'))
