@@ -11,7 +11,7 @@ app.post('/add-client', (req, res) => {
     addClient.save(error => {
         if (error)
             console.error(error)
-        console.log('new client added');
+        console.log('new client added!');
     })
     res.send('client added')
 });

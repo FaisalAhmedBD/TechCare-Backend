@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 var Models = require('../Model/clientModel');
-var { addClient } = require('../Middleware/addClient');
+var { addClient } = require('../Middlewares/addClient');
 
 let getClientInfo = (req, res) => {
     Models.client.find({}, (err, data) => {
