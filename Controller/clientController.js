@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express();
-var Models = require('../Model/clientModel');
-var { addClient } = require('../Middlewares/addClient');
+var { client } = require('../Model/clientModel');
 
 let getClientInfo = (req, res) => {
-    Models.client.find({}, (err, data) => {
+    client.find({}, (err, data) => {
         if (err) {
             console.log('error : ', err);
             res.send('No data found')
@@ -18,7 +17,26 @@ let getClientInfo = (req, res) => {
     });
 }
 let addNewClient = (req, res) => {
-    addClient.save(error => {
+    const {
+        name,
+        product_name,
+        type,
+        location,
+        feedback,
+        client_logo,
+        product_logo,
+    } = req.body
+
+    const newClient = new client({
+        name,
+        product_name,
+        type,
+        location,
+        feedback,
+        client_logo,
+        product_logo,
+    })
+    newClient.save(error => {
         if (error)
             console.error(error)
         console.log('new client added!');
