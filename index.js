@@ -6,6 +6,11 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
-app.get('/', getClientInfo);
+app.get('/', (req, res) => {
+    res.send('Hello TechCare !!');
+})
+
+app.get('/clients', getClientInfo);
+app.get('/team-members', getClientInfo);
 app.post('/add-client', addNewClient);
 app.listen(8000, () => console.log('TechCare is listening on port 8000!'))
