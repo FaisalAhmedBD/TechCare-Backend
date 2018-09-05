@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/FaisalAhmedBD/TechCare-Backend#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "circular-json": "^0.5.5",
     "express": "^4.16.3",
     "mongodb": "^3.1.4",
