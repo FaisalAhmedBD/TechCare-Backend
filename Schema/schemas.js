@@ -10,12 +10,12 @@ var clientSchema = new Schema({
     client_logo: String,
     product_logo: String,
 });
-var teamMember = new Schema({
+var teamMemberSchema = new Schema({
     name: String,
     designation: String,
     image: String
 });
-var career = new Schema({
+var careerSchema = new Schema({
     designation: String,
     number_of_vacancies: String,
     experience: String,
@@ -25,7 +25,7 @@ var career = new Schema({
     requirements: String,
     valuable_experience: String
 });
-var products = new Schema({
+var productSchema = new Schema({
     product_name: String,
     product_logo: String,
     client_name: String,
@@ -39,7 +39,7 @@ var products = new Schema({
 });
 module.exports = {
     clientSchema,
-    teamMember,
-    career,
-    products
+    teamMemberSchema,
+    careerSchema,
+    productSchema
 };
