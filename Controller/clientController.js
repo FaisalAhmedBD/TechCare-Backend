@@ -1,6 +1,4 @@
-const express = require('express');
-const app = express();
-var { client } = require('../Model/clientModel');
+var { client } = require('../Model/models');
 
 let getClientInfo = (req, res) => {
     client.find({}, (err, data) => {
