@@ -1,4 +1,4 @@
-var Models = require('../Model/models');
+var Models = require('../Model/clientModel');
 
 var nwClient = new Models.client({
     name: 'Onnorokom Group',
