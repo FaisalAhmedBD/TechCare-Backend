@@ -17,7 +17,16 @@ let getClientInfo = (req, res) => {
         }
     });
 }
+let addNewClient = (req, res) => {
+    addClient.save(error => {
+        if (error)
+            console.error(error)
+        console.log('new client added!');
+    })
+    res.send('client added')
+}
+
 module.exports = {
     getClientInfo,
-    addClient
+    addNewClient
 }
