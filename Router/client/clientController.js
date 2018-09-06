@@ -1,7 +1,7 @@
-var { client } = require('./model');
+var { clientModel } = require('./model');
 
 let getClientInfo = (req, res) => {
-    return client
+    return clientModel
         .find({})
         .then(data => {
             res.send({
@@ -24,7 +24,7 @@ let addNewClient = (req, res) => {
         product_logo,
     } = req.body
 
-    const newClient = new client({
+    const newClient = new clientModel({
         name,
         product_name,
         type,
