@@ -1,4 +1,4 @@
-var { client } = require('../../Model/models');
+var { client } = require('./model');
 
 let getClientInfo = (req, res) => {
     return client
