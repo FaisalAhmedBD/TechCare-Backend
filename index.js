@@ -3,6 +3,7 @@ var path = require('path')
 const app = express();
 var bodyParser = require("body-parser");
 var {router_v1}=require('./Router/index');
+require('./configDatabase/index');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/static', express.static(path.join(__dirname, 'public')));
 

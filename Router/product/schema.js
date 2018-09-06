@@ -14,5 +14,6 @@ var productSchema=new Schema({
     images: String
 })
 module.exports={
-    productSchema
+    productSchema,
+    mongoose
 }
