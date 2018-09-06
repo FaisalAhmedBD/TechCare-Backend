@@ -1,5 +1,4 @@
-var mongoose = require('mongoose');
-var { clientSchema } = require('./schema');
+var { clientSchema,mongoose } = require('./schema');
 var clientModel = mongoose.model('client', clientSchema);
 
 module.exports = {

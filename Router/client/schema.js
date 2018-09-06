@@ -11,5 +11,6 @@ var clientSchema = new Schema({
     product_logo: String,
 });
 module.exports = {
-    clientSchema
+    clientSchema,
+    mongoose
 };

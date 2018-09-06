@@ -6,5 +6,6 @@ var teamMemberSchema=new mongoose.Schema({
     image: String
 })
 module.exports={
-    teamMemberSchema
+    teamMemberSchema,
+    mongoose
 }

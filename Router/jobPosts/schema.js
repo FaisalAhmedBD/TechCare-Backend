@@ -12,5 +12,6 @@ var jobPostSchema=new Schema({
     valuable_experience: String
 })
 module.exports={
-    jobPostSchema
+    jobPostSchema,
+    mongoose
 }
