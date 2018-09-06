@@ -1,6 +1,6 @@
 var { productModel } = require('./model');
 
-let getProducts = (req, res) => {
+let getProductInfo = (req, res) => {
     return  productModel
         .find({})
         .then(data => {
@@ -27,7 +27,7 @@ let addNewProduct = (req, res) => {
         images
     } = req.body;
 
-    const newProduct = new product({
+    const newProduct = new productModel({
         product_name,
         product_logo,
         client_name,
@@ -50,6 +50,6 @@ let addNewProduct = (req, res) => {
 
 }
 module.exports = {
-    getProducts,
+    getProductInfo,
     addNewProduct
 }
