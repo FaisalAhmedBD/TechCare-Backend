@@ -17,6 +17,6 @@ app.get('/team-members', getTeamMemberInfo);
 app.get('/job-posts', getJobPosts);
 app.post('/add-client', addNewClient);
 app.post('/add-team-member', addnewTeamMember);
-app.post('./add-job-post', addJobPost);
+app.post('/add-job-post', addJobPost);
 
 app.listen(8000, () => console.log('TechCare is listening on port 8000!'))
