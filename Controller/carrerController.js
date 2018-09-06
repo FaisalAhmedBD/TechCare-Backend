@@ -14,8 +14,6 @@ let getJobPosts = (req, res) => {
     })
 }
 let addJobPost = (req, res) => {
-    //console.log('req body : ',req.body);
-   // res.send('bla bla')
     const {
         designation,
         number_of_vacancies,
