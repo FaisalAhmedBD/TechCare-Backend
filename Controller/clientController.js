@@ -3,8 +3,8 @@ var { client } = require('../Model/models');
 let getClientInfo = (req, res) => {
     client.find({}, (err, data) => {
         if (err) {
-            console.log('error : ', err);
-            res.send('No data found')
+            console.log('no  client data found, error : ', err);
+            res.send('No client found')
         }
         else {
             res.send({
