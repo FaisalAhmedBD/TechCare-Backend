@@ -1,7 +1,7 @@
-var mongoose=require("mongoose");
-var schema=mongoose.schema;
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
 
-var jobPostSchema=new schema({
+var jobPostSchema=new Schema({
     designation: String,
     number_of_vacancies: String,
     experience: String,
