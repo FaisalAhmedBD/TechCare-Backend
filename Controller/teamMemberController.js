@@ -13,7 +13,8 @@ let getTeamMemberInfo = (req, res) => {
         }
     })
 }
-let addnewTeamMember = (res, req) => {
+let addnewTeamMember = (req, res) => {
+    console.log('req.body : ',req.body)
     const {
         name,
         designation,
@@ -27,7 +28,7 @@ let addnewTeamMember = (res, req) => {
             console.error(error)
         res.send('new team member added')
     }
-    )
+)
 }
 module.exports = {
     getTeamMemberInfo,
