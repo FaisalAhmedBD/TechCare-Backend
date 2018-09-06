@@ -21,7 +21,7 @@ var careerSchema = new Schema({
     experience: String,
     salary: String,
     intro_text: String,
-    Mission: String,
+    mission: String,
     requirements: String,
     valuable_experience: String
 });

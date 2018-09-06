@@ -14,7 +14,7 @@ let getTeamMemberInfo = (req, res) => {
     })
 }
 let addnewTeamMember = (req, res) => {
-    console.log('req.body : ',req.body)
+   // console.log('req.body : ',req.body)
     const {
         name,
         designation,
