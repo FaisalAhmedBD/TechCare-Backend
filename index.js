@@ -1,5 +1,5 @@
 const express = require('express');
-var path = require('path')
+var path = require('path');
 const app = express();
 var bodyParser = require("body-parser");
 var compression = require('compression');
@@ -14,4 +14,4 @@ app.get('/', (req, res) => {
 })
 app.use('/v1',router);
 
-app.listen(8000, () => console.log('TechCare is listening on port 8000!'))
+app.listen(8000, () => console.log('TechCare is listening on port 8000!'));
