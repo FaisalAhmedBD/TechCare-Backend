@@ -14,4 +14,4 @@ app.get('/', (req, res) => {
 })
 app.use('/v1',router);
 
-app.listen(8000, () => console.log('TechCare is listening on port 8000!'));
+app.listen(8002, () => console.log('TechCare is listening on port 8000!'));
