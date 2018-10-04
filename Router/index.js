@@ -1,20 +1,20 @@
 const express = require('express');
-var router_v1 = express.Router();
-var { getClientInfo, addNewClient } = require('./client/clientController');
-var { getJobPosts, addJobPost } = require('./jobPosts/controller');
-var { getProductInfo, addNewProduct } = require('./product/controller');
-var { getTeamMemberInfo, addNewTeamMember } = require('./teamMember/controller');
+var router = express.Router();
+var { getClientInfo, addNewClient } = require('../Module/client');
+var { getJobPosts, addJobPost } = require('../Module/jobPosts');
+var { getProductInfo, addNewProduct } = require('../Module/product');
+var { getTeamMemberInfo, addNewTeamMember } = require('../Module/teamMember');
 
-router_v1.get('/clients', getClientInfo);
-router_v1.get('/job-posts', getJobPosts);
-router_v1.get('/products', getProductInfo);
-router_v1.get('/team-members', getTeamMemberInfo);
+router.get('/clients', getClientInfo);
+router.get('/job-posts', getJobPosts);
+router.get('/products', getProductInfo);
+router.get('/team-members', getTeamMemberInfo);
 
-router_v1.post('/add-client', addNewClient);
-router_v1.post('/add-job-post', addJobPost);
-router_v1.post('/add-new-product', addNewProduct);
-router_v1.post('/add-team-member', addNewTeamMember);
+router.post('/add-client', addNewClient);
+router.post('/add-job-post', addJobPost);
+router.post('/add-new-product', addNewProduct);
+router.post('/add-team-member', addNewTeamMember);
 
 module.exports = {
-    router_v1
+    router
 }
